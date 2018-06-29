@@ -204,19 +204,22 @@ html {
     margin-bottom: 15px;
     .img_team {
       position: relative;
-      &:hover > .text_team {
-        background-color: $color-bg;
-        color: $color-white;
-        transition-duration: 2s;
-      }
-      &:hover > .img_team_1 {
-        opacity: 0.4;
-        transition-duration: 2s;
-      }
-      &:hover > .text-block {
-        display: block;
-        transition-duration: 5s ease;
-      }
+      box-sizing: border-box;
+      &:hover {
+        .text_team {
+          background-color: $color-bg;
+          color: $color-white;
+          transition: .5s ease;
+        }
+        .img_team_1 {
+          opacity: 0.4;
+        }
+        .text-block {
+          opacity: 1;
+          visibility: visible;
+          transition: visibility 1s, opacity 1s linear;
+        }
+      } 
       .img_team_1 {
         width: 100%;
       }
@@ -240,9 +243,11 @@ html {
       .text-block {
         z-index: 2;
         top: 40%;
+        visibility: hidden;
         position: absolute;
         left: 15%;
-        display: none;
+        opacity: 0;
+        transition: visibility 1s, opacity 1s linear;
         .icon_team {
           padding: 22px;
           font-size: 15px;
@@ -250,7 +255,7 @@ html {
           color: $color-white;
           &:hover {
             background-color: $color-hv-item;
-            transition-duration: 2s ease;
+            transition: .5s ease;
           }
         }
       }
@@ -277,16 +282,18 @@ html {
     padding-bottom: 30px;
     &:hover {
       .text-block {
-        display: block;
-        transition-duration: .5s;
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 1s, opacity 1s linear;
       }
       .img_work_1 {
         opacity: 0.5;
-        transition-duration: .5s;
+        transition: .5s ease;
       }
       .icon {
-        display: block;
-        transition-duration: .5s;
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 1s, opacity 1s linear;
       }
     }
     .img_work_1 {
@@ -302,7 +309,9 @@ html {
       font-size: 15px;
       background-color: $color-text;
       color: $color-white;
-      display: none;
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 1s, opacity 1s linear;
     }
     .icon {
       position: absolute;
@@ -310,7 +319,9 @@ html {
       z-index: 2;
       right: 47%;
       color: $color-white;
-      display: none;
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 1s, opacity 1s linear;
     }
   }
   .col-md-12 {
