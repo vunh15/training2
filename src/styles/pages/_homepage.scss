@@ -10,7 +10,6 @@ html {
 }
 // style banner
 .banner-container {
-  background-color: $color-bg;
   height: 600px;
   .content {
     padding: 0;
@@ -20,8 +19,8 @@ html {
   }
   .item {
     height: auto;
-    left: 2%;
-    top: 30%;
+    left: 1%;
+    top: 25%;
     position: inherit;
     z-index: 1;
     transform: translate(-5%,35%);
@@ -43,7 +42,7 @@ html {
   }
   .slick-dots li button:before {
     font-family: 'slick';
-    font-size: 20px;
+    font-size: 10px;
     line-height: 0px;
     position: absolute;
     top: 0;
@@ -74,7 +73,7 @@ html {
     display: none;
   }
 }
-.slider {
+.content {
   height: 600px;
   background-repeat: no-repeat;
   background-position: 50% 40%;
@@ -139,19 +138,18 @@ html {
   .icon {
     margin-top: 50px;
     .icon_modest {
-      padding: 5px;
-      font-size: 25px;
+      padding: 22px;
+      font-size: 15px;
       background-color: $color-icon;
       color: $color-white;
       &:hover {
         background-color: $color-hv-icon;
-        @include transform(scale(1.1));
-        color: $color-hover;
+        @include transform(scale(1.2));
       }
     }
   }
   .modest_left {
-    padding-left: 50px;
+    padding-left: 15px;
     .modest_1 {
       padding-bottom: 40px;
       position: relative;
@@ -159,10 +157,7 @@ html {
         position: relative;
         width: 50px;
         height: 50px;
-        padding-left: 40px;
-        &:hover {
-          @include transform(scale(1.1));
-        }
+        padding-left: 15px;
         .modest_png {
           position: absolute;
           float: left;
@@ -176,10 +171,11 @@ html {
         }
       }
       .modest_text {
-        width: 355px;
+        width: 90%;
         position: absolute;
-        right: 5%;
+        left: 15%;
         top: 0;
+        padding-right: 10px;
         .title_text {
           font-weight: bold;
           font-size: 16px;
@@ -211,12 +207,15 @@ html {
       &:hover > .text_team {
         background-color: $color-bg;
         color: $color-white;
+        transition-duration: 2s;
       }
       &:hover > .img_team_1 {
         opacity: 0.4;
+        transition-duration: 2s;
       }
       &:hover > .text-block {
         display: block;
+        transition-duration: 5s ease;
       }
       .img_team_1 {
         width: 100%;
@@ -242,15 +241,16 @@ html {
         z-index: 2;
         top: 40%;
         position: absolute;
-        left: 27%;
+        left: 15%;
         display: none;
         .icon_team {
-          padding: 5px;
-          font-size: 25px;
+          padding: 22px;
+          font-size: 15px;
           background-color: $color-bg;
           color: $color-white;
           &:hover {
             background-color: $color-hv-item;
+            transition-duration: 2s ease;
           }
         }
       }
@@ -278,12 +278,15 @@ html {
     &:hover {
       .text-block {
         display: block;
+        transition-duration: .5s;
       }
       .img_work_1 {
         opacity: 0.5;
+        transition-duration: .5s;
       }
       .icon {
         display: block;
+        transition-duration: .5s;
       }
     }
     .img_work_1 {
@@ -322,6 +325,7 @@ html {
       color: $color-white;
       &:hover {
         background-color: $color-hover;
+        border: 1px solid $color-hover;
       }
     }
   }
@@ -413,7 +417,7 @@ html {
       }
     }
     .text-block {
-      padding: 20px 20px 15px 0;
+      padding: 20px;
       z-index: 2;
       width: 45%;
       .title_text {

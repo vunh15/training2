@@ -5,12 +5,23 @@
       height: 600px;
     }
   }
+  #contact {
+    .stay {
+      .form-contact {
+        right: 25%;
+      }
+    }
+  }
 }
 @include breakpoint(1440) {
-  .banner-container {
-    height: 500px;
-    .slider {
-      height: 500px;
+  .item {
+    top: 20%;
+  }
+  #contact {
+    .stay {
+      .form-contact {
+        right: 10%;
+      }
     }
   }
 }
@@ -47,10 +58,18 @@
       top: 30%;
     }
   }
+  .team {
+      .content_team {
+        .img_team {
+          .text-block {
+            left: 30%;
+          }
+        }
+      }
+  }
   #contact {
     .stay {
       .text-block {
-        padding: 50px 0 50px 110px;
         z-index: 2;
         width: 43%;
       }
@@ -64,12 +83,16 @@
             width: 100%;
           }
           .form-inline {
+            width: 100%;
+            .form-group {
+              width: 100%;
+            }
             .lb_contact {
               font-size: 12px;
               width: 100%;
             }
             .inp_contact {
-              width: 195px;
+              width: 100%;
             }
           }
         }
@@ -144,26 +167,39 @@
 @include breakpoint(768) {
   .header {
     .logo {
-      margin-top: 20px;
+      margin-top: 0;
       z-index: 1;
       width: 20%;
     }
   }
   .banner-container {
-    .container-fluid {
+    height: 400px;
+    .content {
       padding: 0;
+      height: 400px;
       .slick-dots {
         right: 70px;
       }
+      .item {
+        top: 10%;
+      }
+    }
+    .slider {
+      height: 400px;
     }
   }
   .modest {
+    .modest_left_1 {
+      padding-bottom: 20px;
+      .icon {
+        padding-top: 15px;
+      }
+    }
     .modest_left {
-      padding: 0 0 0 30px;
       .modest_1 {
         margin-bottom: 0;
         .modest_center {
-          left: 5%;
+          left: 0;
         }
         .modest_text {
           right: 0;
@@ -184,6 +220,11 @@
   .team {
     .content_team {
       text-align: center;
+      .img_team {
+        .text-block {
+          left: 24%;
+        }
+      }
     }
   }
   .what {
@@ -298,7 +339,7 @@
         margin-bottom: 30px;
         .modest_text {
           right: 0;
-          padding-left: 0;
+          padding-left: 15px;
         }
         .modest_center {
           left: 0;
@@ -309,6 +350,11 @@
   .team {
     .content_team {
       width: 100%;
+      .img_team {
+        .text-block {
+          left: 24%;
+        }
+      }
     }
   }
   .what {
@@ -334,6 +380,7 @@
   #contact {
     .stay {
       .text-block {
+        padding: 20px;
         width: 100%;
         .text {
           font-size: 15px;
@@ -363,6 +410,9 @@
     .item {
       top: 10%;
     }
+    .content {
+      height: 300px;
+    }
     .slider {
       height: 300px;
       .lato {
@@ -370,7 +420,15 @@
       }
     }
   }
+  #about {
+    padding: 40px 0;
+  }
   .modest {
+    .icon {
+      .icon_modest {
+        padding: 10px;
+      }
+    }
     .modest_left {
       .modest_1 {
         .modest_text {
@@ -378,6 +436,16 @@
           .text {
             display: none;
           }
+        }
+      }
+    }
+  }
+  .team {
+    .content_team {
+      width: 100%;
+      .img_team {
+        .text-block {
+          left: 20%;
         }
       }
     }

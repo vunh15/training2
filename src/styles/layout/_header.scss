@@ -114,6 +114,7 @@ body {
         box-sizing: border-box;
         color: $color-white;
         border: 1px solid $color-white;
+        border-radius: 5px;
       }
       .title-nav {
         padding: 5px 15px;
@@ -125,6 +126,7 @@ body {
       .title-nav {
         color: $color-hover;
         border: 1px solid $color-hover;
+        border-radius: 5px;
       }
     }
   }
