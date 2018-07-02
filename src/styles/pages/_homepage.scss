@@ -19,11 +19,14 @@ html {
   }
   .item {
     height: auto;
-    left: 1%;
+    left: 0;
     top: 25%;
     position: inherit;
     z-index: 1;
-    transform: translate(-5%,35%);
+    transform: translate(0%,35%);
+    .btn_banner {
+      padding-left: 5px;
+    }
   }
   .slick-track {
     height: 100%;
@@ -54,23 +57,6 @@ html {
     color: black;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  }
-  .slick-prev {
-    display: none;
-    left: 50px;
-    z-index: 2;
-  }
-  .slick-prev:before {
-    font-size: 30px;
-    display: none;
-  }
-  .slick-next {
-    display: none;
-    right: 50px;
-  }
-  .slick-next:before {
-    font-size: 30px;
-    display: none;
   }
 }
 .content {
@@ -179,6 +165,7 @@ html {
         .title_text {
           font-weight: bold;
           font-size: 16px;
+          color: $color-black;
         }
         .text {
           font-size: 14px;
@@ -209,7 +196,7 @@ html {
         .text_team {
           background-color: $color-bg;
           color: $color-white;
-          transition: .5s ease;
+          transition: .5s linear;
         }
         .img_team_1 {
           opacity: 0.4;
@@ -217,7 +204,7 @@ html {
         .text-block {
           opacity: 1;
           visibility: visible;
-          transition: visibility 1s, opacity 1s linear;
+          transition: visibility .5s, opacity .1s linear;
         }
       } 
       .img_team_1 {
@@ -232,6 +219,7 @@ html {
         bottom: 0;
         left: 0; 
         padding: 20px 25px;
+        color: $color-black;
         .title_img {
           font-weight: bold;
           font-size: 14px;
@@ -247,7 +235,7 @@ html {
         position: absolute;
         left: 15%;
         opacity: 0;
-        transition: visibility 1s, opacity 1s linear;
+        transition: visibility .5s, opacity .2s linear;
         .icon_team {
           padding: 22px;
           font-size: 15px;
@@ -255,7 +243,7 @@ html {
           color: $color-white;
           &:hover {
             background-color: $color-hv-item;
-            transition: .5s ease;
+            transition: .2s ease;
           }
         }
       }
@@ -284,7 +272,7 @@ html {
       .text-block {
         visibility: visible;
         opacity: 1;
-        transition: visibility 1s, opacity 1s linear;
+        transition: visibility .5s, opacity .5s linear;
       }
       .img_work_1 {
         opacity: 0.5;
@@ -293,7 +281,7 @@ html {
       .icon {
         visibility: visible;
         opacity: 1;
-        transition: visibility 1s, opacity 1s linear;
+        transition: visibility .5s, opacity .5s linear;
       }
     }
     .img_work_1 {
@@ -311,7 +299,7 @@ html {
       color: $color-white;
       visibility: hidden;
       opacity: 0;
-      transition: visibility 1s, opacity 1s linear;
+      transition: visibility .5s, opacity .5s linear;
     }
     .icon {
       position: absolute;
@@ -321,7 +309,7 @@ html {
       color: $color-white;
       visibility: hidden;
       opacity: 0;
-      transition: visibility 1s, opacity 1s linear;
+      transition: visibility .5s, opacity .5s linear;
     }
   }
   .col-md-12 {
@@ -364,6 +352,7 @@ html {
       .title_text {
         padding: 10px;
         font-weight: bold;
+        color: $color-black;
       }
       .text {
         font-size: 15px;
@@ -474,7 +463,7 @@ html {
         }
         .btn {
           background-color: $color-hover;
-          color: $color-white;
+          color: $color-white;  
         }
       } 
     }
