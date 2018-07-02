@@ -156,7 +156,7 @@
           padding-left: 0;
           .form-inline {
             .inp_contact {
-              width: 175px;
+              width: 100%;
             }
           }
         }
@@ -391,6 +391,11 @@
         width: 100%;
         right: 0;
         bottom: 0;
+        .form-container {
+          .btn {
+            width: 100%;
+          }
+        }
       }
     }
   }

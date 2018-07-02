@@ -192,23 +192,14 @@ html {
     .img_team {
       position: relative;
       box-sizing: border-box;
-      &:hover {
-        .text_team {
-          background-color: $color-bg;
-          color: $color-white;
-          transition: .5s linear;
-        }
-        .img_team_1 {
-          opacity: 0.4;
-        }
-        .text-block {
-          opacity: 1;
-          visibility: visible;
-          transition: visibility .5s, opacity .1s linear;
-        }
-      } 
+      transition: 1s linear; 
+      overflow: hidden;
+      > a {
+        display: block;
+      }
       .img_team_1 {
-        width: 100%;
+        opacity: 1;
+        transition: opacity 1s linear;
       }
       .text_team {
         height: auto;
@@ -219,7 +210,10 @@ html {
         bottom: 0;
         left: 0; 
         padding: 20px 25px;
-        color: $color-black;
+        transition: 1s linear;
+        a {
+          color: $color-black;
+        }
         .title_img {
           font-weight: bold;
           font-size: 14px;
@@ -231,22 +225,36 @@ html {
       .text-block {
         z-index: 2;
         top: 40%;
-        visibility: hidden;
         position: absolute;
         left: 15%;
         opacity: 0;
-        transition: visibility .5s, opacity .2s linear;
+        transition: 1s linear;
         .icon_team {
           padding: 22px;
           font-size: 15px;
           background-color: $color-bg;
           color: $color-white;
+          transition: 1s linear;
           &:hover {
             background-color: $color-hv-item;
-            transition: .2s ease;
           }
         }
       }
+      &:hover {
+        .text_team {
+          background-color: $color-bg;
+          opacity: 1;
+          & a {
+            color: $color-white;
+          }
+        }
+        .img_team_1 {
+          opacity: 0.5;
+        }
+        .text-block {
+          opacity: 1;
+        }
+      } 
     }
   }
 }
@@ -276,7 +284,6 @@ html {
       }
       .img_work_1 {
         opacity: 0.5;
-        transition: .5s ease;
       }
       .icon {
         visibility: visible;
@@ -286,6 +293,7 @@ html {
     }
     .img_work_1 {
       width: 100%;
+      transition: .5s linear;
     }
     .text-block {
       position: absolute;
@@ -296,10 +304,12 @@ html {
       padding: 20px;
       font-size: 15px;
       background-color: $color-text;
-      color: $color-white;
       visibility: hidden;
       opacity: 0;
       transition: visibility .5s, opacity .5s linear;
+      a {
+        color: $color-white;
+      }
     }
     .icon {
       position: absolute;
@@ -322,6 +332,7 @@ html {
       background-color: $color-bg;
       border-radius: 5px;
       color: $color-white;
+      transition: .5s linear;
       &:hover {
         background-color: $color-hover;
         border: 1px solid $color-hover;
@@ -365,7 +376,7 @@ html {
   background-color: $color-bg;
   @extend #about;
   .container {
-    padding: 0;
+    padding: 0 15px;
   }
   .features {
     @extend .work;
@@ -374,7 +385,6 @@ html {
     }
     .title_features {
       @extend .title_work;
-      margin-left: 15px;
     }
     .img_features {
       .img_features_1 {
