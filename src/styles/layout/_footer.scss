@@ -1,0 +1,21 @@
+footer {
+  background-color: $color-bg;
+  color: $color-white;
+  padding: 20px;
+  .text-left {
+    padding: 0;
+  }
+  .text-footer{
+    font-size: 12px;
+  }
+  .icon {
+    .icon-footer {
+      padding: 10px;
+      font-size: 18px;
+      color: $color-white;
+      &:hover {
+        color: $color-hover;
+      }
+    }
+  }
+}
